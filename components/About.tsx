@@ -119,8 +119,11 @@ const About: React.FC = () => {
 
                     <div className="grid grid-cols-1 gap-6">
                         {PUBLICATIONS.map((pub, i) => (
-                            <motion.div 
-                                key={i} 
+                            <motion.a 
+                                key={i}
+                                href={pub.url}
+                                target="_blank"
+                              
                                 initial={{ opacity: 0, x: 20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
@@ -156,7 +159,7 @@ const About: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </motion.a>
                         ))}
                     </div>
                 </motion.div>
