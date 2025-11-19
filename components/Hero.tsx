@@ -96,7 +96,7 @@ const Hero: React.FC = () => {
                     <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform group-hover:text-primary-400" />
                   </a>
                   <a
-                    href="/resume.pdf"
+                    href="/Brandon_Doey_CV.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group px-6 py-3 bg-zinc-900/50 border border-white/10 text-zinc-300 font-medium rounded-xl hover:bg-zinc-800 hover:text-white hover:border-primary-500/50 transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
