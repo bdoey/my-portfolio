@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -15,6 +16,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
+    { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
@@ -33,7 +35,7 @@ const Navbar: React.FC = () => {
         }`}
       >
         <div className="flex justify-between items-center">
-          <a href="#" className="text-lg font-bold tracking-tighter text-white flex items-center gap-1 group">
+          <a href="#home" className="text-lg font-bold tracking-tighter text-white flex items-center gap-1 group">
             BD<span className="text-primary-500 group-hover:text-accent-500 transition-colors">.</span>
           </a>
 

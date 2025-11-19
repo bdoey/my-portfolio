@@ -1,10 +1,11 @@
+
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
-import EducationPublications from './components/EducationPublications';
+import About from './components/About';
 import Contact from './components/Contact';
 import BackgroundGrid from './components/BackgroundGrid';
 
@@ -13,38 +14,34 @@ function App() {
     <div className="min-h-screen bg-[#050505] text-zinc-200 selection:bg-primary-500/30 selection:text-primary-200 relative">
       
       {/* Global Background Elements - Fixed position to stay consistent throughout scroll */}
-      <div className="fixed inset-0 z-0 pointer-events-auto">
-        {/* Interactive Grid */}
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        {/* Interactive Tech Grid */}
         <BackgroundGrid />
         
-        {/* Animated Blobs for Depth - Placed behind grid via z-index logic or ordering, but visually nicely blended */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-0 right-0 p-20 opacity-20">
-               <div className="w-96 h-96 bg-primary-500 rounded-full blur-[128px] animate-blob" />
-            </div>
-            <div className="absolute bottom-0 left-0 p-20 opacity-10">
-               <div className="w-64 h-64 bg-accent-500 rounded-full blur-[128px] animate-blob animation-delay-2000" />
-            </div>
+        {/* Ambient Atmosphere - Deep, subtle glows */}
+        <div className="absolute inset-0">
+            {/* Top Right - Primary Green */}
+            <div className="absolute -top-[10%] -right-[10%] w-[800px] h-[800px] bg-primary-900/10 rounded-full blur-[120px] animate-pulse-slow" />
+            
+            {/* Bottom Left - Accent Cyan */}
+            <div className="absolute -bottom-[10%] -left-[10%] w-[600px] h-[600px] bg-accent-900/10 rounded-full blur-[100px] opacity-60" />
+            
+            {/* Center Depth */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-zinc-900/20 rounded-full blur-[150px]" />
         </div>
-        
-        {/* Vignette to focus center */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#050505_100%)] pointer-events-none" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 pointer-events-none">
-        {/* Re-enable pointer events for actual content */}
-        <div className="pointer-events-auto">
-            <Navbar />
-            <main>
-            <Hero />
-            <Experience />
-            <Projects />
-            <Skills />
-            <EducationPublications />
-            </main>
-            <Contact />
-        </div>
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Experience />
+          <Projects />
+          <Skills />
+        </main>
+        <Contact />
       </div>
     </div>
   );

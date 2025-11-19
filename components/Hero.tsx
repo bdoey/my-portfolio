@@ -1,11 +1,39 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Facebook, Twitter, User } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
+
+// Custom X (Twitter) Icon for accuracy
+const XIcon = ({ size = 20, className = "" }: { size?: number, className?: string }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
+const SocialLink = ({ href, icon: Icon, label }: { href: string, icon: any, label: string }) => (
+    <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative p-3 bg-zinc-900/50 border border-white/10 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-800 transition-all duration-300 overflow-hidden"
+        aria-label={label}
+    >
+        <div className="absolute inset-0 bg-primary-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+        <Icon size={20} className="relative z-10 group-hover:scale-110 transition-transform duration-300" />
+    </a>
+);
 
 const Hero: React.FC = () => {
   return (
-    <section id="about" className="relative min-h-screen flex flex-col justify-center pt-20 overflow-hidden border-b border-white/5">
+    <section id="home" className="relative min-h-screen flex flex-col justify-center pt-20 overflow-hidden border-b border-white/5">
       
       <div className="max-w-6xl mx-auto px-6 z-10 w-full">
         
@@ -38,21 +66,34 @@ const Hero: React.FC = () => {
               {PERSONAL_INFO.summary.split('.')[0]}. {PERSONAL_INFO.summary.split('.')[1]}.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <a
-                href="#experience"
+                href="#about"
                 className="group px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-zinc-200 transition-all flex items-center justify-center gap-2"
               >
-                Explore Work
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                About Me
+                <User size={16} className="group-hover:translate-x-0.5 transition-transform" />
               </a>
               <a
-                href={`mailto:${PERSONAL_INFO.email}`}
+                href="#experience"
                 className="px-6 py-3 border border-white/10 text-white font-medium rounded-lg hover:bg-white/5 transition-all flex items-center justify-center gap-2"
               >
-                Contact Me
+                Explore Work
+                <ArrowRight size={16} />
               </a>
             </div>
+
+            {/* Social Links Row */}
+            <div className="flex items-center gap-4">
+                <div className="h-px w-12 bg-white/10 hidden sm:block" />
+                <div className="flex gap-3">
+                    <SocialLink href="https://www.linkedin.com/in/bdoey" icon={Linkedin} label="LinkedIn" />
+                    <SocialLink href="https://github.com/bdoey" icon={Github} label="GitHub" />
+                    <SocialLink href="https://www.facebook.com/bdoey" icon={Facebook} label="Facebook" />
+                    <SocialLink href="https://x.com/bdoey" icon={XIcon} label="X" />
+                </div>
+            </div>
+
           </motion.div>
 
           {/* Right side Abstract Tech Visual */}
@@ -62,32 +103,69 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="hidden lg:block relative"
           >
-             <div className="relative w-full aspect-square max-w-md mx-auto border border-white/10 bg-white/5 backdrop-blur-sm rounded-2xl p-1 overflow-hidden">
+             <div className="relative w-full aspect-square max-w-md mx-auto border border-white/10 bg-white/5 backdrop-blur-sm rounded-2xl p-1 overflow-hidden shadow-2xl shadow-black/50">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-accent-500/10" />
                 
                 {/* Code Window Mockup */}
-                <div className="h-full w-full bg-zinc-950 rounded-xl overflow-hidden flex flex-col">
+                <div className="h-full w-full bg-zinc-950 rounded-xl overflow-hidden flex flex-col border border-white/5">
                   <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-zinc-900/50">
-                    <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-                    <div className="w-3 h-3 rounded-full bg-green-500/50" />
+                    <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50" />
+                    <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50" />
                     <div className="ml-auto text-xs text-zinc-500 font-mono">agent_workflow.py</div>
                   </div>
-                  <div className="p-6 font-mono text-sm text-zinc-400 space-y-2 overflow-hidden opacity-80">
-                    <div className="flex gap-2"><span className="text-purple-400">import</span> <span className="text-white">torch</span></div>
-                    <div className="flex gap-2"><span className="text-purple-400">from</span> <span className="text-white">transformers</span> <span className="text-purple-400">import</span> AutoModel</div>
+                  
+                  {/* Code Content */}
+                  <div className="p-6 font-mono text-sm text-zinc-300 space-y-1.5 overflow-hidden opacity-90 leading-relaxed">
+                    {/* Line 1: Decorator */}
+                    <div className="flex gap-2">
+                      <span className="text-blue-400">@agent.task</span>
+                    </div>
+                    
+                    {/* Line 2: Function Def */}
+                    <div className="flex flex-wrap gap-x-2">
+                      <span className="text-purple-400">async def</span> 
+                      <span className="text-yellow-300">monitor_churn_risk</span>
+                      <span className="text-zinc-400">(user_id: <span className="text-accent-500">str</span>):</span>
+                    </div>
+                    
+                    {/* Line 3: Comment */}
+                    <div className="pl-4 text-zinc-500 italic">
+                      # Real-time inference on user behavior
+                    </div>
+                    
+                    {/* Line 4: Assignment */}
+                    <div className="pl-4 flex flex-wrap gap-x-2">
+                      <span>risk_score =</span>
+                      <span className="text-purple-400">await</span> 
+                      <span>model.predict_async(user_id)</span>
+                    </div>
+                    
+                    {/* Line 5: Empty */}
                     <br/>
-                    <div className="flex gap-2"><span className="text-blue-400">class</span> <span className="text-yellow-300">ChurnPredictor</span>:</div>
-                    <div className="pl-4 flex gap-2"><span className="text-blue-400">def</span> <span className="text-yellow-300">__init__</span>(self):</div>
-                    <div className="pl-8 flex gap-2"><span className="text-zinc-500"># Initialize multi-agent system</span></div>
-                    <div className="pl-8 flex gap-2">self.agents = <span className="text-primary-400">[]</span></div>
-                    <div className="pl-8 flex gap-2">self.threshold = <span className="text-accent-500">0.85</span></div>
-                    <br/>
-                    <div className="pl-4 flex gap-2"><span className="text-blue-400">async def</span> <span className="text-yellow-300">analyze</span>(self, data):</div>
-                    <div className="pl-8 flex gap-2"><span className="text-purple-400">return</span> <span className="text-primary-400">await</span> self.process(data)</div>
+                    
+                    {/* Line 6: If statement */}
+                    <div className="pl-4 flex gap-x-2">
+                      <span className="text-purple-400">if</span>
+                      <span>risk_score {'>'}</span> 
+                      <span className="text-orange-400">0.85</span>:
+                    </div>
+                    
+                    {/* Line 7: Comment */}
+                    <div className="pl-8 text-zinc-500 italic">
+                      # Trigger autonomous retention workflow
+                    </div>
+                    
+                    {/* Line 8: Await Action */}
+                    <div className="pl-8 flex flex-wrap gap-x-2 items-center">
+                      <span className="text-purple-400">await</span>
+                      <span>retention_bot.engage(user_id, strategy=<span className="text-primary-400">"discount"</span>)</span>
+                    </div>
                     
                     {/* Animated cursor */}
-                    <div className="pl-8 mt-2 w-2 h-4 bg-primary-500 animate-pulse" />
+                    <div className="pl-8 mt-2">
+                         <div className="w-2 h-4 bg-primary-500 animate-pulse" />
+                    </div>
                   </div>
                 </div>
              </div>

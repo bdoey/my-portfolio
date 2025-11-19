@@ -8,7 +8,11 @@ export const PERSONAL_INFO = {
   email: "brandon.doey@icloud.com",
   phone: "561.459.7801",
   github: "bdoey.github.io",
-  summary: "Accomplished and results-driven systems engineer with over 10 years of experience designing, building, and deploying scalable, end-to-end machine learning and business intelligence systems. Proven expertise in developing everything from high-throughput forecasting engines to next-generation agentic AI workflows using Large Language Models (LLMs). A strategic thinker and published researcher adept at translating cutting-edge academic research into robust, production-ready solutions."
+  summary: "Accomplished and results-driven systems engineer with over 10 years of experience designing, building, and deploying scalable, end-to-end machine learning and business intelligence systems. Proven expertise in developing everything from high-throughput forecasting engines to next-generation agentic AI workflows."
+};
+
+export const ABOUT_CONTENT = {
+  bio: "I thrive on leveraging data to uncover insights that drive impactful business decisions. My goal is to help organizations unlock the full potential of their data, delivering strategic recommendations that fuel growth, optimize operations, and drive innovation.\n\nWith a strong foundation in systems engineering and over a decade of experience, I bridge the gap between complex technical architectures and strategic business objectives. From architecting self-optimizing forecasting pipelines to designing novel multi-agent frameworks, I am passionate about building intelligent systems that solve real-world problems."
 };
 
 export const EXPERIENCE: ExperienceItem[] = [
@@ -388,11 +392,13 @@ export const EDUCATION: EducationItem[] = [
 
 export const PUBLICATIONS: PublicationItem[] = [
   {
-    citation: "Doey, B., et al. (2025). \"Linguistic complexity and gender in financial analysis: Evidence from earnings call questioning patterns.\"",
-    link: "Journal of Behavioral Finance"
+    citation: "Doey, B., et al. (2025). \"How negative tones in earnings calls shape media narratives.\"",
+    link: "Review of Behavioral Finance",
+    description: "This study investigates the relationship between earnings call sentiment and subsequent media coverage sentiment. Understanding these intricate connections between information channels aids communication experts and market analysts in shaping strategic messaging and predicting market impacts."
   },
   {
-    citation: "Doey, B., et al. (2025). \"How negative tones in earnings calls shape media narratives.\"",
-    link: "Review of Behavioral Finance"
+    citation: "Doey, B., et al. (2025). \"Linguistic complexity and gender in financial analysis: Evidence from earnings call questioning patterns.\"",
+    link: "Journal of Behavioral Finance",
+    description: "This study examines gender-based differences in linguistic complexity during earnings conference calls. Our findings suggest that gender diversity in analyst ranks may enhance information extraction during earnings calls through complementary questioning strategies."
   }
 ];

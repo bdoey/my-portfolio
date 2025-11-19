@@ -34,4 +34,5 @@ export interface EducationItem {
 export interface PublicationItem {
   citation: string;
   link: string;
+  description?: string;
 }
