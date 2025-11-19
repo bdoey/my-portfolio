@@ -3,16 +3,16 @@ import { ExperienceItem, ProjectCategory, SkillCategory, EducationItem, Publicat
 
 export const PERSONAL_INFO = {
   name: "Brandon Doey",
-  role: "Senior Manager - Data Science | Systems Engineer",
+  role: "Full-Stack Data Scientist",
   location: "Orlando, FL",
   email: "brandon.doey@icloud.com",
   phone: "561.459.7801",
   github: "bdoey.github.io",
-  summary: "Accomplished and results-driven systems engineer with over 10 years of experience designing, building, and deploying scalable, end-to-end machine learning and business intelligence systems. Proven expertise in developing everything from high-throughput forecasting engines to next-generation agentic AI workflows."
+  summary: "Accomplished Full-Stack Data Scientist with over 10 years of experience designing, building, and deploying scalable, end-to-end machine learning and business intelligence systems. Proven expertise in developing everything from high-throughput forecasting engines to next-generation agentic AI workflows."
 };
 
 export const ABOUT_CONTENT = {
-  bio: "I thrive on leveraging data to uncover insights that drive impactful business decisions. My goal is to help organizations unlock the full potential of their data, delivering strategic recommendations that fuel growth, optimize operations, and drive innovation.\n\nWith a strong foundation in systems engineering and over a decade of experience, I bridge the gap between complex technical architectures and strategic business objectives. From architecting self-optimizing forecasting pipelines to designing novel multi-agent frameworks, I am passionate about building intelligent systems that solve real-world problems."
+  bio: "I thrive on leveraging data to uncover insights that drive impactful business decisions. My goal is to help organizations unlock the full potential of their data, delivering strategic recommendations that fuel growth, optimize operations, and drive innovation.\n\nWith extensive experience in both model development and data engineering, I bridge the gap between complex technical architectures and strategic business objectives. From architecting self-optimizing forecasting pipelines to designing novel multi-agent frameworks, I am passionate about building intelligent systems that solve real-world problems."
 };
 
 export const EXPERIENCE: ExperienceItem[] = [
