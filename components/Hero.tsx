@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Facebook, Twitter, User, FileText } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Facebook, User, FileText } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 // Custom X (Twitter) Icon for accuracy
@@ -23,7 +23,7 @@ const SocialLink = ({ href, icon: Icon, label }: { href: string, icon: any, labe
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative p-3 bg-zinc-900/50 border border-white/10 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-800 transition-all duration-300 overflow-hidden"
+        className="group relative p-3 bg-zinc-900/50 border border-white/10 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-800 hover:border-primary-500/50 transition-all duration-300 overflow-hidden"
         aria-label={label}
     >
         <div className="absolute inset-0 bg-primary-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -59,55 +59,61 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            {/* Name Intro */}
-            <div className="flex items-center gap-3 mb-4">
+            {/* Headline */}
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+              Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-500">Intelligent</span> Systems.
+            </h1>
+
+            {/* Name Intro (Moved Here) */}
+            <div className="flex items-center gap-3 mb-6">
                 <span className="h-px w-8 bg-primary-500/50" />
                 <h2 className="text-lg md:text-xl font-mono text-primary-400 tracking-wide">
                     Hi, I'm <span className="text-white font-bold">Brandon Doey</span>
                 </h2>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-              Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-500">Intelligent</span> Systems.
-            </h1>
-            <p className="text-zinc-400 text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
+            {/* Summary */}
+            <p className="text-zinc-400 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
               {PERSONAL_INFO.summary.split('.')[0]}. {PERSONAL_INFO.summary.split('.')[1]}.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-10 flex-wrap">
-              <a
-                href="#about"
-                className="group px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-zinc-200 transition-all flex items-center justify-center gap-2"
-              >
-                About Me
-                <User size={16} className="group-hover:translate-x-0.5 transition-transform" />
-              </a>
-              <a
-                href="#experience"
-                className="px-6 py-3 border border-white/10 text-white font-medium rounded-lg hover:bg-white/5 transition-all flex items-center justify-center gap-2"
-              >
-                Explore Work
-                <ArrowRight size={16} />
-              </a>
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 border border-zinc-700 bg-zinc-900/30 text-zinc-300 font-medium rounded-lg hover:bg-zinc-800 hover:text-white hover:border-primary-500/50 transition-all flex items-center justify-center gap-2"
-              >
-                Resume
-                <FileText size={16} />
-              </a>
-            </div>
+            {/* Actions & Socials Container */}
+            <div className="flex flex-col gap-6">
+                {/* Buttons Row */}
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="#about"
+                    className="group px-6 py-3 bg-zinc-900/50 border border-white/10 text-zinc-300 font-medium rounded-xl hover:bg-zinc-800 hover:text-white hover:border-primary-500/50 transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
+                  >
+                    About Me
+                    <User size={16} className="group-hover:text-primary-400 transition-colors" />
+                  </a>
+                  <a
+                    href="#experience"
+                    className="group px-6 py-3 bg-zinc-900/50 border border-white/10 text-zinc-300 font-medium rounded-xl hover:bg-zinc-800 hover:text-white hover:border-primary-500/50 transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
+                  >
+                    Explore Work
+                    <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform group-hover:text-primary-400" />
+                  </a>
+                  <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group px-6 py-3 bg-zinc-900/50 border border-white/10 text-zinc-300 font-medium rounded-xl hover:bg-zinc-800 hover:text-white hover:border-primary-500/50 transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
+                  >
+                    Resume
+                    <FileText size={16} className="group-hover:text-primary-400 transition-colors" />
+                  </a>
+                </div>
 
-            {/* Social Links Row */}
-            <div className="flex items-center gap-4">
-                <div className="h-px w-12 bg-white/10 hidden sm:block" />
-                <div className="flex gap-3">
-                    <SocialLink href="https://www.linkedin.com/in/bdoey" icon={Linkedin} label="LinkedIn" />
-                    <SocialLink href="https://github.com/bdoey" icon={Github} label="GitHub" />
-                    <SocialLink href="https://www.facebook.com/bdoey" icon={Facebook} label="Facebook" />
-                    <SocialLink href="https://x.com/bdoey" icon={XIcon} label="X" />
+                {/* Social Links Row */}
+                <div className="flex items-center gap-4">
+                    <div className="flex gap-3">
+                        <SocialLink href="https://www.linkedin.com/in/bdoey" icon={Linkedin} label="LinkedIn" />
+                        <SocialLink href="https://github.com/bdoey" icon={Github} label="GitHub" />
+                        <SocialLink href="https://www.facebook.com/bdoey" icon={Facebook} label="Facebook" />
+                        <SocialLink href="https://x.com/bdoey" icon={XIcon} label="X" />
+                    </div>
                 </div>
             </div>
 
