@@ -17,7 +17,7 @@ const About: React.FC = () => {
         >
            <div className="flex items-center gap-2 mb-4">
              <span className="h-px w-8 bg-primary-500/50" />
-             <span className="text-primary-400 font-mono text-xs tracking-widest uppercase">About The Engineer</span>
+             <span className="text-primary-400 font-mono text-xs tracking-widest uppercase">About Me</span>
           </div>
            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
               Strategic Insight. <span className="text-zinc-500">Technical Precision.</span>
@@ -59,7 +59,7 @@ const About: React.FC = () => {
                     {/* Name Badge */}
                     <div className="hidden lg:block absolute -right-6 bottom-10 bg-zinc-950/80 backdrop-blur-md border border-white/10 py-3 px-6 rounded-lg shadow-xl border-l-4 border-l-primary-500">
                          <h3 className="text-white font-bold tracking-tight">{PERSONAL_INFO.name}</h3>
-                         <p className="text-xs text-primary-400 font-mono mt-0.5">Systems Engineer</p>
+                         <p className="text-xs text-primary-400 font-mono mt-0.5">Full-Stack Data Scientist</p>
                     </div>
                 </motion.div>
 
