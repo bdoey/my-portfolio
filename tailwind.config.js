@@ -11,7 +11,7 @@ export default {
         zinc: {
           850: '#1f2022',
           900: '#18181b',
-          950: '#09090b', // Deep dark background
+          950: '#09090b',
         },
         primary: {
           400: '#34d399',
@@ -19,7 +19,7 @@ export default {
           600: '#059669',
         },
         accent: {
-          500: '#06b6d4', // Cyan for gradients
+          500: '#06b6d4',
         }
       },
       fontFamily: {
