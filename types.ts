@@ -35,4 +35,5 @@ export interface PublicationItem {
   citation: string;
   link: string;
   description?: string;
+  url: string;
 }
