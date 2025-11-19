@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Facebook, Twitter, User } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Facebook, Twitter, User, FileText } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 // Custom X (Twitter) Icon for accuracy
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex justify-center md:justify-start mb-8"
+          className="flex justify-center md:justify-start mb-6"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-xs font-mono text-primary-400">
             <span className="relative flex h-2 w-2">
@@ -59,6 +59,14 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
+            {/* Name Intro */}
+            <div className="flex items-center gap-3 mb-4">
+                <span className="h-px w-8 bg-primary-500/50" />
+                <h2 className="text-lg md:text-xl font-mono text-primary-400 tracking-wide">
+                    Hi, I'm <span className="text-white font-bold">Brandon Doey</span>
+                </h2>
+            </div>
+
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
               Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-500">Intelligent</span> Systems.
             </h1>
@@ -66,7 +74,7 @@ const Hero: React.FC = () => {
               {PERSONAL_INFO.summary.split('.')[0]}. {PERSONAL_INFO.summary.split('.')[1]}.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 mb-10 flex-wrap">
               <a
                 href="#about"
                 className="group px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-zinc-200 transition-all flex items-center justify-center gap-2"
@@ -80,6 +88,15 @@ const Hero: React.FC = () => {
               >
                 Explore Work
                 <ArrowRight size={16} />
+              </a>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 border border-zinc-700 bg-zinc-900/30 text-zinc-300 font-medium rounded-lg hover:bg-zinc-800 hover:text-white hover:border-primary-500/50 transition-all flex items-center justify-center gap-2"
+              >
+                Resume
+                <FileText size={16} />
               </a>
             </div>
 

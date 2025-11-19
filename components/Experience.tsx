@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { EXPERIENCE } from '../constants';
@@ -44,8 +45,8 @@ const Experience: React.FC = () => {
                 </div>
               </div>
 
-              {/* Card Container */}
-              <div className="group relative bg-zinc-950/50 border border-white/5 hover:border-primary-500/30 rounded-xl p-6 md:p-8 transition-all duration-300 overflow-hidden">
+              {/* Card Container - Increased Opacity */}
+              <div className="group relative bg-zinc-950/90 backdrop-blur-sm border border-white/5 hover:border-primary-500/30 rounded-xl p-6 md:p-8 transition-all duration-300 overflow-hidden">
                 
                 {/* Tech Background Overlay */}
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] rounded-xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity" />

@@ -16,31 +16,31 @@ const Tooltip = ({ content, isVisible }: { content: { title: string; body: strin
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 5 }}
           transition={{ duration: 0.15 }}
-          className="absolute z-50 w-72 p-4 rounded-lg bg-zinc-950/95 border border-primary-500/20 shadow-2xl backdrop-blur-md pointer-events-none -translate-y-[110%] left-0 sm:left-auto"
+          className="absolute z-50 w-96 max-w-[90vw] p-6 rounded-lg bg-zinc-950 border border-primary-500/30 shadow-2xl pointer-events-none -translate-y-[110%] left-0 sm:left-auto"
           style={{
-            boxShadow: '0 0 20px rgba(16, 185, 129, 0.1)',
+            boxShadow: '0 0 30px rgba(16, 185, 129, 0.15)',
           }}
         >
            {/* Decorative corner markers */}
-           <div className="absolute top-0 left-0 w-2 h-2 border-l border-t border-primary-500/50 rounded-tl-sm" />
-           <div className="absolute top-0 right-0 w-2 h-2 border-r border-t border-primary-500/50 rounded-tr-sm" />
-           <div className="absolute bottom-0 left-0 w-2 h-2 border-l border-b border-primary-500/50 rounded-bl-sm" />
-           <div className="absolute bottom-0 right-0 w-2 h-2 border-r border-b border-primary-500/50 rounded-br-sm" />
+           <div className="absolute top-0 left-0 w-3 h-3 border-l border-t border-primary-500/50 rounded-tl-sm" />
+           <div className="absolute top-0 right-0 w-3 h-3 border-r border-t border-primary-500/50 rounded-tr-sm" />
+           <div className="absolute bottom-0 left-0 w-3 h-3 border-l border-b border-primary-500/50 rounded-bl-sm" />
+           <div className="absolute bottom-0 right-0 w-3 h-3 border-r border-b border-primary-500/50 rounded-br-sm" />
 
-           <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2 border-b border-white/10 pb-2 mb-1">
-                <div className="w-1.5 h-1.5 rounded-full bg-primary-500 animate-pulse" />
-                <span className="text-primary-400 font-mono text-xs font-bold uppercase tracking-wider">
+           <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-3 border-b border-white/10 pb-3 mb-1">
+                <div className="w-2 h-2 rounded-full bg-primary-500 animate-pulse" />
+                <span className="text-primary-400 font-mono text-sm font-bold uppercase tracking-wider">
                   {content.title}
                 </span>
               </div>
-              <p className="text-zinc-300 text-xs leading-relaxed font-sans">
+              <p className="text-zinc-200 text-sm leading-relaxed font-sans">
                 {content.body}
               </p>
            </div>
            
            {/* Arrow */}
-           <div className="absolute bottom-0 left-4 translate-y-1/2 rotate-45 w-2 h-2 bg-zinc-950 border-r border-b border-primary-500/20" />
+           <div className="absolute bottom-0 left-6 translate-y-1/2 rotate-45 w-3 h-3 bg-zinc-950 border-r border-b border-primary-500/30" />
         </motion.div>
       )}
     </AnimatePresence>
@@ -113,7 +113,7 @@ const Skills: React.FC = () => {
             ))}
           </div>
 
-          {/* Detail View */}
+          {/* Detail View - Increased Opacity */}
           <div className="w-full md:w-2/3 relative">
             <AnimatePresence mode="wait">
               <motion.div
@@ -122,7 +122,7 @@ const Skills: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -10 }}
                 transition={{ duration: 0.2 }}
-                className="bg-zinc-950/50 border border-white/10 rounded-xl p-8 min-h-[400px] relative"
+                className="bg-zinc-950/90 backdrop-blur-sm border border-white/10 rounded-xl p-8 min-h-[400px] relative"
               >
                 {/* Decorative Grid Background */}
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] rounded-xl pointer-events-none" />

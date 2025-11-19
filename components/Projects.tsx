@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { PROJECTS } from '../constants';
@@ -72,7 +73,7 @@ const Projects: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className={`group relative bg-zinc-950/50 border border-white/5 rounded-xl overflow-hidden flex flex-col hover:border-primary-500/30 transition-all duration-300 ${
+              className={`group relative bg-zinc-950/90 backdrop-blur-sm border border-white/5 rounded-xl overflow-hidden flex flex-col hover:border-primary-500/30 transition-all duration-300 ${
                 (index === 0 || index === 3) && !filter ? 'lg:col-span-2' : ''
               }`}
             >
