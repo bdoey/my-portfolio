@@ -48,7 +48,7 @@ const About: React.FC = () => {
                             alt={PERSONAL_INFO.name}
                             className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
                             onError={(e) => {
-                                e.currentTarget.src = "https://raw.githubusercontent.com/bdoey/portfolio/refs/heads/main/brandon2.jpeg";
+                                e.currentTarget.src = "/headshot.jpg";
                             }}
                         />
                         
