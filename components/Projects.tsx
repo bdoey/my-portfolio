@@ -114,7 +114,8 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="py-32 relative bg-zinc-950 min-h-screen">
+    // <section id="projects" className="py-32 relative bg-zinc-950 min-h-screen">  // This adds a solid zinc black that covers grid background
+    <section id="projects" className="py-32 relative">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Header & Search */}
