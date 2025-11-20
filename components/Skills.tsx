@@ -27,9 +27,9 @@ const Skills: React.FC = () => {
   return (
     //<section id="skills" className="py-32 bg-zinc-900/20 relative overflow-visible min-h-screen flex items-center">
     <section id="skills" className="py-32 relative">
-      {/* Background Decoration */}
+      {/* Background Decoration 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary-500/20 to-transparent" />
-      
+      */}
       <div className="max-w-6xl mx-auto px-6 w-full">
         {/* Header Section */}
         <motion.div
