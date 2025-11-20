@@ -152,8 +152,8 @@ const Projects: React.FC = () => {
             </motion.div>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Projects Grid - UPDATED: Changed grid-cols logic for standard 2-column layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {PROJECTS.map((category, index) => {
             const matches = hasMatches(category.items);
             if (!matches && filter) return null;
@@ -166,9 +166,8 @@ const Projects: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className={`group relative bg-zinc-950/90 backdrop-blur-sm border border-white/5 rounded-xl overflow-hidden flex flex-col hover:border-primary-500/30 transition-all duration-300 ${
-                (index === 0 || index === 3) && !filter ? 'lg:col-span-2' : ''
-              }`}
+              // UPDATED: Removed the conditional lg:col-span-2 logic
+              className="group relative bg-zinc-950/90 backdrop-blur-sm border border-white/5 rounded-xl overflow-hidden flex flex-col hover:border-primary-500/30 transition-all duration-300"
             >
                {/* Internal Grid Texture */}
                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] rounded-xl pointer-events-none" />
@@ -196,7 +195,6 @@ const Projects: React.FC = () => {
                         {category.category}
                     </h3>
                   </div>
-                  <ArrowUpRight className="text-zinc-700 group-hover:text-white transition-colors transform group-hover:translate-x-1 group-hover:-translate-y-1" size={18} />
                 </div>
                 
                 <div className="space-y-3 relative z-10">
@@ -217,7 +215,7 @@ const Projects: React.FC = () => {
                                 {item.title}
                             </span>
                             
-                            <FileCode size={14} className="opacity-0 -translate-x-2 group-hover/item:opacity-50 group-hover/item:translate-x-0 transition-all duration-300 text-zinc-500" />
+                            <ArrowUpRight size={14} className="opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 text-zinc-500 group-hover/item:text-primary-400" />
                         </a>
                     );
                   })}
