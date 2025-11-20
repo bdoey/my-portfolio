@@ -59,16 +59,16 @@ const Contact: React.FC = () => {
           {/* Social Links Row */}
           <div className="flex justify-center gap-6 mb-12">
             <a href="https://www.linkedin.com/in/bdoey" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-white transition-colors">
-                <Linkedin size={24} />
+                <Linkedin size={32} />
             </a>
             <a href="https://github.com/bdoey" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-white transition-colors">
-                <Github size={24} />
+                <Github size={32} />
             </a>
             <a href="https://www.facebook.com/bdoey" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-white transition-colors">
-                <Facebook size={24} />
+                <Facebook size={32} />
             </a>
             <a href="https://x.com/bdoey" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-white transition-colors">
-                <XIcon size={24} />
+                <XIcon size={32} />
             </a>
           </div>
 
