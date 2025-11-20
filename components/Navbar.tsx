@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
       >
         <div className="flex justify-between items-center">
           <a href="#home" className="text-lg font-bold tracking-tighter text-white flex items-center gap-1 group">
-            BD<span className="text-primary-500 group-hover:text-accent-500 transition-colors">.</span>
+            BDOEY<span className="text-primary-500 group-hover:text-accent-500 transition-colors">.DEV</span>
           </a>
 
           {/* Desktop Nav */}
