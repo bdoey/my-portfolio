@@ -1,8 +1,99 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { PROJECTS } from '../constants';
-import { ArrowUpRight, Brain, LineChart, Database, Code2, Cpu, Search, Terminal } from 'lucide-react';
+import { ArrowUpRight, Brain, LineChart, Database, Code2, Cpu, Search, Terminal, FileCode } from 'lucide-react';
+
+// --- CONSTANTS & DATA STRUCTURES ---
+
+export interface ProjectItem {
+  title: string;
+  url: string;
+}
+
+export interface ProjectCategory {
+  id: string;
+  category: string;
+  link: string;
+  items: ProjectItem[];
+}
+
+export const PROJECTS: ProjectCategory[] = [
+  {
+    id: "gen-ai",
+    category: "Generative AI",
+    link: "#",
+    items: [
+      { 
+        title: "AI Enabled Financial Literacy Q&A System", 
+        url: "/notebooks/AI_Financial_Literacy_Local_LLM.html" 
+      },
+      { 
+        title: "LLM Powered Data Anomaly Detection App", 
+        url: "/notebooks/AI_Llama3_Powered_Anomaly_Detection.html" 
+      },
+      { 
+        title: "AI Research Summarizer with LLM Feedback", 
+        url: "/notebooks/AI_Research_Summarizer_LLM_Feedback.html" 
+      }
+    ]
+  },
+  {
+    id: "fintech",
+    category: "FinTech Apps",
+    link: "#",
+    items: [
+      { 
+        title: "BNPL Credit Worthiness App", 
+        url: "/notebooks/FT_BNPL_CAP5619_Final.html" 
+      },
+      { 
+        title: "DJIA Analysis using NLP and MACD", 
+        url: "/notebooks/FT_DJIA_Analysis_using_NLP_MACD.html" 
+      },
+      { 
+        title: "Trading Agent using Q-Learning", 
+        url: "/notebooks/FT_Trading_Agent_using_Q-learning.html" 
+      }
+    ]
+  },
+  {
+    id: "data-science",
+    category: "Data Science",
+    link: "#",
+    items: [
+      { 
+        title: "Stock Market Prediction using LSTM", 
+        url: "/notebooks/FT_Stock_Prediction_using_LSTM.html" 
+      },
+      { 
+        title: "Churn Prediction using RF Classifier", 
+        url: "/notebooks/DS_Churn_Prediction_using_Classifier.html" 
+      },
+      { 
+        title: "Bankruptcy Prediction using Ensemble ML", 
+        url: "/notebooks/DS_Bankruptcy_Prediction_using_Ensemble.html" 
+      }
+    ]
+  },
+  {
+    id: "ml",
+    category: "Machine Learning",
+    link: "#",
+    items: [
+      { 
+        title: "Customer Segmentation using Clustering", 
+        url: "/notebooks/ML_Customer_Segmentation_using_Clustering.html" 
+      },
+      { 
+        title: "Dropout Prediction Neural Network", 
+        url: "/notebooks/ML_Dropout_Prediction_using_FFNN.html" 
+      },
+      { 
+        title: "Sentiment Analysis using LDA", 
+        url: "/notebooks/ML_Sentiment_Analysis_using_LDA.html" 
+      }
+    ]
+  }
+];
 
 const iconMap: Record<string, React.ReactNode> = {
   "Generative AI": <Brain className="text-primary-400" size={20} />,
@@ -11,17 +102,19 @@ const iconMap: Record<string, React.ReactNode> = {
   "Machine Learning": <Cpu className="text-pink-400" size={20} />,
 };
 
+// --- COMPONENT ---
+
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState('');
 
   // Helper to check if a category has matching items
-  const hasMatches = (items: string[]) => {
+  const hasMatches = (items: ProjectItem[]) => {
     if (!filter) return true;
-    return items.some(item => item.toLowerCase().includes(filter.toLowerCase()));
+    return items.some(item => item.title.toLowerCase().includes(filter.toLowerCase()));
   };
 
   return (
-    <section id="projects" className="py-32 relative">
+    <section id="projects" className="py-32 relative bg-zinc-950 min-h-screen">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Header & Search */}
@@ -77,7 +170,7 @@ const Projects: React.FC = () => {
                 (index === 0 || index === 3) && !filter ? 'lg:col-span-2' : ''
               }`}
             >
-               {/* Internal Grid Texture matching Skills */}
+               {/* Internal Grid Texture */}
                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] rounded-xl pointer-events-none" />
 
                {/* Header Bar */}
@@ -108,18 +201,24 @@ const Projects: React.FC = () => {
                 
                 <div className="space-y-3 relative z-10">
                   {category.items.map((item, i) => {
-                    const isMatch = filter ? item.toLowerCase().includes(filter.toLowerCase()) : true;
+                    const isMatch = filter ? item.title.toLowerCase().includes(filter.toLowerCase()) : true;
                     
                     return (
-                        <div 
+                        <a 
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             key={i} 
-                            className={`flex items-start gap-3 text-sm transition-all duration-300 ${isMatch ? 'opacity-100' : 'opacity-30'}`}
+                            className={`flex items-start gap-3 text-sm transition-all duration-300 group/item cursor-pointer ${isMatch ? 'opacity-100' : 'opacity-30 hover:opacity-100'}`}
                         >
-                            <span className="mt-1.5 w-1 h-1 bg-zinc-600 rounded-full group-hover:bg-primary-500 group-hover:shadow-[0_0_5px_#10b981] transition-all" />
-                            <span className={`font-mono ${isMatch ? 'text-zinc-300 group-hover:text-white' : 'text-zinc-600'}`}>
-                                {item}
+                            <span className="mt-1.5 w-1 h-1 bg-zinc-600 rounded-full group-hover/item:bg-primary-500 group-hover/item:shadow-[0_0_5px_#10b981] transition-all" />
+                            
+                            <span className={`font-mono flex-1 ${isMatch ? 'text-zinc-300 group-hover/item:text-primary-400' : 'text-zinc-600'}`}>
+                                {item.title}
                             </span>
-                        </div>
+                            
+                            <FileCode size={14} className="opacity-0 -translate-x-2 group-hover/item:opacity-50 group-hover/item:translate-x-0 transition-all duration-300 text-zinc-500" />
+                        </a>
                     );
                   })}
                 </div>
