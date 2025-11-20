@@ -7,7 +7,7 @@ export const PERSONAL_INFO = {
   location: "Orlando, FL",
   email: "brandon.doey@icloud.com",
   phone: "561.459.7801",
-  github: "bdoey.github.io",
+  github: "github.com/bdoey/my-portfolio",
   summary: "Accomplished Full-Stack Data Scientist with over 10 years of experience designing, building, and deploying scalable, end-to-end machine learning and business intelligence systems. Proven expertise in developing everything from high-throughput forecasting engines to next-generation agentic AI workflows."
 };
 
@@ -22,7 +22,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     company: "Verizon",
     period: "Aug 2024 – Present",
     highlights: [
-      "Led the design of a novel multi-agent framework to automate wireless churn analysis, reducing manual investigation time by 60%.",
+      "Led the design of a novel multi-agent framework to automate churn analysis, reducing manual investigation time by 60%.",
       "Architected a self-optimizing churn forecasting pipeline using Optuna and NeuralProphet, achieving 15% higher accuracy.",
       "Designed an innovative XGBoost-Prophet hybrid ensemble model increasing accuracy by 10% with 25% less compute.",
       "Led end-to-end execution of A/B tests to validate model performance against core business KPIs."
