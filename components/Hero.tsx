@@ -88,13 +88,14 @@ const Hero: React.FC = () => {
                     About Me
                     <User size={16} className="group-hover:text-primary-400 transition-colors" />
                   </a>
-                  <a
+                  {/* 
+                  <!-- <a
                     href="#experience"
                     className="group px-6 py-3 bg-zinc-900/50 border border-white/10 text-zinc-300 font-medium rounded-xl hover:bg-zinc-800 hover:text-white hover:border-primary-500/50 transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
                   >
                     Explore Work
                     <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform group-hover:text-primary-400" />
-                  </a>
+                  </a> -->*/}
                   <a
                     href="/Brandon_Doey_CV.pdf"
                     target="_blank"
@@ -106,15 +107,15 @@ const Hero: React.FC = () => {
                   </a>
                 </div>
 
-                {/* Social Links Row */}
-                <div className="flex items-center gap-4">
+                {/* Social Links Row 
+                <!-- <div className="flex items-center gap-4">
                     <div className="flex gap-3">
                         <SocialLink href="https://www.linkedin.com/in/bdoey" icon={Linkedin} label="LinkedIn" />
                         <SocialLink href="https://github.com/bdoey" icon={Github} label="GitHub" />
                         <SocialLink href="https://www.facebook.com/bdoey" icon={Facebook} label="Facebook" />
                         <SocialLink href="https://x.com/bdoey" icon={XIcon} label="X" />
                     </div>
-                </div>
+                </div> -->*/}
             </div>
 
           </motion.div>
