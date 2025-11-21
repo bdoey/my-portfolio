@@ -106,7 +106,7 @@ const Skills: React.FC = () => {
                         </span>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[280px] overflow-y-auto pr-2 scrollbar-thin scrollbar-track-black scrollbar-thumb-zinc-700">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {getActiveSkills().map((skill, i) => (
                             <motion.button
                                 key={skill.name}
