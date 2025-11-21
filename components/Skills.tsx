@@ -92,9 +92,9 @@ const Skills: React.FC = () => {
             
             {/* 1. The Skill Grid */}
             <div className="bg-zinc-950/50 border border-white/10 rounded-xl p-6 md:p-8 relative overflow-hidden">
-                {/* Grid Background Effect */}
+                {/* Grid Background Effect 
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
-                
+                */}
                 <div className="relative z-10">
                     <div className="flex justify-between items-end mb-6 border-b border-white/5 pb-4">
                         <h3 className="text-lg font-mono text-primary-400 uppercase tracking-widest flex items-center gap-2">
