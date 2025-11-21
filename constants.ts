@@ -8,7 +8,7 @@ export const PERSONAL_INFO = {
   email: "brandon.doey@icloud.com",
   phone: "561.459.7801",
   github: "github.com/bdoey/my-portfolio",
-  summary: "Accomplished Full-Stack Data Scientist with over 10 years of experience designing, building, and deploying scalable, end-to-end machine learning and business intelligence systems. Proven expertise in developing everything from high-throughput forecasting engines to next-generation agentic AI workflows."
+  summary: "Accomplished Full-Stack Data Scientist with extensive experience designing, building, and deploying scalable, end-to-end machine learning and business intelligence systems. Proven expertise in developing everything from high-throughput forecasting engines to next-generation agentic AI workflows."
 };
 
 export const ABOUT_CONTENT = {
