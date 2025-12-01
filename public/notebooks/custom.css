@@ -1,0 +1,131 @@
+/* notebooks/custom.css */
+
+:root {
+    /* Theme Colors extracted from your screenshot */
+    --bg-color: #050505;       /* Deep Black */
+    --cell-bg: #0f161b;        /* Dark Slate/Greenish tint for code blocks */
+    --text-main: #d1d5db;      /* Light Gray text */
+    --text-header: #ffffff;    /* Stark White headers */
+    --accent: #22d3ee;         /* "Intelligent" Cyan/Teal */
+    --border: #1e293b;         /* Dark borders */
+    --code-font: 'JetBrains Mono', 'Fira Code', monospace;
+    --body-font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px) !important;
+    background-size: 50px 50px !important;
+    color: var(--text-main) !important;
+    font-family: var(--body-font) !important;
+    padding-top: 60px !important;
+}
+
+/* --- THE FIX: Force Paragraph Text Color --- */
+/* Jupyter often wraps text in .rendered_html. We must override its default black color. */
+div.text_cell_render, 
+div.rendered_html, 
+div.text_cell,
+p, li, span {
+    color: var(--text-main) !important;
+}
+
+/* Center Content */
+div.container {
+    max-width: 900px !important;
+    margin: 0 auto !important;
+}
+
+/* --- Code Cell Styling --- */
+div.input_area, div.highlight {
+    background-color: var(--cell-bg) !important;
+    border: 1px solid #334155 !important;
+    border-radius: 12px !important;
+}
+
+/* Syntax Highlighting overrides */
+.highlight .k, .highlight .kn { color: #c084fc !important; } /* Purples */
+.highlight .s2, .highlight .s1 { color: #2dd4bf !important; } /* Teal strings */
+.highlight .nf { color: #60a5fa !important; } /* Blue functions */
+.highlight .c1 { color: #6b7280 !important; font-style: italic; } /* Grey Comments */
+
+pre {
+    color: var(--text-main) !important;
+    font-family: var(--code-font) !important;
+    font-size: 0.95em !important;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-header) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    margin-top: 1.5em !important;
+}
+
+h1 {
+    font-size: 2.5em !important;
+    border-bottom: none !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Accent Links */
+a {
+    color: var(--accent) !important;
+    text-decoration: none !important;
+    border-bottom: 1px dashed var(--accent);
+}
+a:hover {
+    background-color: rgba(34, 211, 238, 0.1);
+    border-bottom-style: solid;
+}
+
+/* Tables */
+table.dataframe {
+    border: none !important;
+    margin-top: 20px !important;
+}
+table.dataframe th {
+    background-color: var(--cell-bg) !important;
+    color: var(--accent) !important;
+    border-bottom: 1px solid var(--border) !important;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    padding: 10px !important;
+}
+table.dataframe td {
+    border-bottom: 1px solid var(--border) !important;
+    padding: 10px !important;
+    color: var(--text-main) !important;
+}
+/* Zebra striping for tables */
+table.dataframe tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* --- Navigation Bar --- */
+#portfolio-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(5, 5, 5, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+}
+
+#portfolio-nav a {
+    color: var(--text-header) !important;
+    font-weight: 600;
+    font-size: 1.1em;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
