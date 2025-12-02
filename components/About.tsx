@@ -44,11 +44,11 @@ const About: React.FC = () => {
                         
                         {/* Image Placeholder - User should replace src with actual image */}
                         <img 
-                            src="/headshot.jpg" 
+                            src="/headshot2.jpg" 
                             alt={PERSONAL_INFO.name}
                             className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
                             onError={(e) => {
-                                e.currentTarget.src = "/headshot.jpg";
+                                e.currentTarget.src = "/headshot2.jpg";
                             }}
                         />
                         
