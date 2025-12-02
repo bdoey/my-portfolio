@@ -35,7 +35,7 @@ const About: React.FC = () => {
                     className="relative"
                 >
                     {/* Tech Border for Image */}
-                    <div className="relative w-full aspect-square max-w-sm mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-white/10 bg-zinc-900 shadow-2xl shadow-black/50">
+                    <div className="relative w-full aspect-square max-w-xs mx-auto lg:mx-0 rounded-2xl overflow-hidden border border-white/10 bg-zinc-900 shadow-2xl shadow-black/50">
                         {/* Corner Accents */}
                         <div className="absolute top-2 left-2 w-4 h-4 border-t border-l border-primary-500/50 rounded-tl z-20" />
                         <div className="absolute top-2 right-2 w-4 h-4 border-t border-r border-primary-500/50 rounded-tr z-20" />
@@ -44,11 +44,11 @@ const About: React.FC = () => {
                         
                         {/* Image Placeholder - User should replace src with actual image */}
                         <img 
-                            src="/headshot2.jpg" 
+                            src="/headshot2.png" 
                             alt={PERSONAL_INFO.name}
                             className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
                             onError={(e) => {
-                                e.currentTarget.src = "/headshot2.jpg";
+                                e.currentTarget.src = "/headshot2.png";
                             }}
                         />
                         
