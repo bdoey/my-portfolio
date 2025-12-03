@@ -168,12 +168,12 @@ const Projects: React.FC = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
               // UPDATED: Removed the conditional lg:col-span-2 logic
-              className="group relative bg-zinc-950/90 backdrop-blur-sm border border-white/5 rounded-xl overflow-hidden flex flex-col hover:border-primary-500/30 transition-all duration-300"
+              className="group relative bg-zinc-950/90 backdrop-blur-sm border border-white/10 rounded-xl p-8 overflow-hidden hover:bg-zinc-900/90 hover:border-primary-500/30 transition-all duration-300"
             >
                {/* Internal Grid Texture 
                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] rounded-xl pointer-events-none" />
               */}
-
+              
                {/* Header Bar */}
               <div className="h-10 bg-zinc-900/50 border-b border-white/5 flex items-center px-4 justify-between relative z-10">
                  <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 group-hover:text-primary-400 transition-colors">
