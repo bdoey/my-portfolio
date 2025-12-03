@@ -48,9 +48,10 @@ const Experience: React.FC = () => {
               {/* Card Container - Increased Opacity */}
               <div className="group relative bg-zinc-950/90 backdrop-blur-sm border border-white/10 rounded-xl p-8 overflow-hidden hover:bg-zinc-900/90 hover:border-primary-500/30 transition-all duration-300">
                 
-                {/* Tech Background Overlay */}
+                {/* Tech Background Overlay 
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] rounded-xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary-500/5 blur-3xl rounded-full pointer-events-none" />
+                */}
 
                 <div className="relative z-10">
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4 border-b border-white/5 pb-4">
