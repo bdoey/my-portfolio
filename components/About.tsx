@@ -130,9 +130,10 @@ const About: React.FC = () => {
                                 transition={{ delay: 0.2 + (i * 0.1) }}
                                 className="group relative bg-zinc-950/90 backdrop-blur-sm border border-white/10 rounded-xl p-8 overflow-hidden hover:bg-zinc-900/90 hover:border-primary-500/30 transition-all duration-300"
                             >
-                                {/* Grid Background */}
+                                {/* Grid Background 
                                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] rounded-xl pointer-events-none opacity-50" />
-                                
+                                */}
+                              
                                 <div className="relative z-10 flex flex-col h-full">
                                     <div className="flex items-start justify-between gap-4 mb-4">
                                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-400 text-xs font-mono font-medium">
