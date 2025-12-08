@@ -28,11 +28,11 @@ export const PROJECTS: ProjectCategory[] = [
       },
       { 
         title: "LLM Powered Data Anomaly Detection App", 
-        url: "/notebooks/AI_Llama3_Powered_Anomaly_Detection.html" 
+        url: "https://colab.research.google.com/github/bdoey/my-portfolio/blob/main/notebooks/AI_Llama3_Powered_Anomaly_Detection.ipynb" 
       },
       { 
         title: "AI Research Summarizer with LLM Feedback", 
-        url: "/notebooks/AI_Research_Summarizer_LLM_Feedback.html" 
+        url: "https://colab.research.google.com/github/bdoey/my-portfolio/blob/main/notebooks/AI_Research_Summarizer_LLM_Feedback.ipynb" 
       }
     ]
   },
@@ -43,15 +43,15 @@ export const PROJECTS: ProjectCategory[] = [
     items: [
       { 
         title: "BNPL Credit Worthiness App", 
-        url: "/notebooks/FT_BNPL_CAP5619_Final.html" 
+        url: "https://colab.research.google.com/github/bdoey/my-portfolio/blob/main/notebooks/FT_BNPL_CAP5619_Final.ipynb" 
       },
       { 
         title: "DJIA Analysis using NLP and MACD", 
-        url: "/notebooks/FT_DJIA_Analysis_using_NLP_MACD.html" 
+        url: "https://colab.research.google.com/github/bdoey/my-portfolio/blob/main/notebooks/FT_DJIA_Analysis_using_NLP_MACD.ipynb" 
       },
       { 
         title: "Trading Agent using Q-Learning", 
-        url: "/notebooks/FT_Trading_Agent_using_Q-learning.html" 
+        url: "https://colab.research.google.com/github/bdoey/my-portfolio/blob/main/notebooks/FT_Trading_Agent_using_Q-learning.ipynb" 
       }
     ]
   },
@@ -62,15 +62,15 @@ export const PROJECTS: ProjectCategory[] = [
     items: [
       { 
         title: "Stock Market Prediction using LSTM", 
-        url: "/notebooks/FT_Stock_Prediction_using_LSTM.html" 
+        url: "https://colab.research.google.com/github/bdoey/my-portfolio/blob/main/notebooks/FT_Stock_Prediction_using_LSTM.ipynb" 
       },
       { 
         title: "Churn Prediction using RF Classifier", 
-        url: "/notebooks/DS_Churn_Prediction_using_Classifier.html" 
+        url: "https://colab.research.google.com/github/bdoey/my-portfolio/blob/main/notebooks/DS_Churn_Prediction_using_Classifier.ipynb" 
       },
       { 
         title: "Bankruptcy Prediction using Ensemble ML", 
-        url: "/notebooks/DS_Bankruptcy_Prediction_using_Ensemble.html" 
+        url: "https://colab.research.google.com/github/bdoey/my-portfolio/blob/main/notebooks/DS_Bankruptcy_Prediction_using_Ensemble.ipynb" 
       }
     ]
   },
@@ -81,15 +81,15 @@ export const PROJECTS: ProjectCategory[] = [
     items: [
       { 
         title: "Customer Segmentation using Clustering", 
-        url: "/notebooks/ML_Customer_Segmentation_using_Clustering.html" 
+        url: "https://colab.research.google.com/github/bdoey/my-portfolio/blob/main/notebooks/ML_Customer_Segmentation_using_Clustering.ipynb" 
       },
       { 
         title: "Dropout Prediction Neural Network", 
-        url: "/notebooks/ML_Dropout_Prediction_using_FFNN.html" 
+        url: "https://colab.research.google.com/github/bdoey/my-portfolio/blob/main/notebooks/ML_Dropout_Prediction_using_FFNN.ipynb" 
       },
       { 
         title: "Sentiment Analysis using LDA", 
-        url: "/notebooks/ML_Sentiment_Analysis_using_LDA.html" 
+        url: "https://colab.research.google.com/github/bdoey/my-portfolio/blob/main/notebooks/ML_Sentiment_Analysis_using_LDA.ipynb" 
       }
     ]
   }
