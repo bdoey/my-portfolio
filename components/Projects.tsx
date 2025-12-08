@@ -24,7 +24,7 @@ export const PROJECTS: ProjectCategory[] = [
     items: [
       { 
         title: "AI Enabled Financial Literacy Q&A System", 
-        url: "/notebooks/AI_Financial_Literacy_Local_LLM.html" 
+        url: "https://colab.research.google.com/github/bdoey/my-portfolio/blob/main/notebooks/AI_Financial_Literacy_Local_LLM.ipynb" 
       },
       { 
         title: "LLM Powered Data Anomaly Detection App", 
