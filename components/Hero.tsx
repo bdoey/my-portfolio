@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
             <div className="flex items-center gap-3 mb-6 pt-6">
                 <span className="h-px w-8 bg-primary-500/50" />
                 <h2 className="text-lg md:text-xl font-mono text-primary-400 tracking-wide">
-                    Hi, I'm <span className="text-white font-bold">Brandon Doey</span>
+                    <span className="text-white font-bold">Hi, I'm Brandon Doey</span>
                 </h2>
             </div>
 
