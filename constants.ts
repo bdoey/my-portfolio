@@ -18,7 +18,7 @@ export const ABOUT_CONTENT = {
 export const EXPERIENCE: ExperienceItem[] = [
   {
     id: "verizon-senior-mgr",
-    role: "Senior Manager - Data Science",
+    role: "Senior Data Scientist",
     company: "Verizon",
     period: "Aug 2024 – Present",
     highlights: [
