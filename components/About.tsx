@@ -156,7 +156,7 @@ const About: React.FC = () => {
                                             Published in <span className="text-zinc-300">{pub.link}</span>
                                         </div>
                                         <div className="text-xs text-zinc-600 font-mono">
-                                            2025
+                                            LINK
                                         </div>
                                     </div>
                                 </div>
