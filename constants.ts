@@ -393,19 +393,19 @@ export const EDUCATION: EducationItem[] = [
 export const PUBLICATIONS: PublicationItem[] = [
   {
     citation: "Doey, B., et al. (2026). \"Off Script: When Earnings Calls and Filings Tell Different Stories.\"",
-    link: "Journal of Behavioral Finance",
+    link: "Journal of Behavioral Finance (2026)",
     description: "This analysis demonstrates that divergence in tone between channels contains meaningful predictive power that markets incorporate gradually. While sentiment divergence creates temporary mispricing, complexity divergence generates stronger and more persistent return predictability, proving that informational inefficiencies arise from the cognitive burden of synthesizing multi-channel communications.",
     url: "https://doi.org/10.1080/15427560.2026.2667513"
   },
   {
     citation: "Doey, B., et al. (2025). \"How negative tones in earnings calls shape media narratives.\"",
-    link: "Review of Behavioral Finance",
+    link: "Review of Behavioral Finance (2025)",
     description: "This study investigates the relationship between earnings call sentiment and subsequent media coverage sentiment. Understanding these intricate connections between information channels aids communication experts and market analysts in shaping strategic messaging and predicting market impacts.",
     url: "https://doi.org/10.1108/RBF-08-2024-0228"
   },
   {
     citation: "Doey, B., et al. (2025). \"Linguistic complexity and gender in financial analysis: Evidence from earnings call questioning patterns.\"",
-    link: "Journal of Behavioral Finance",
+    link: "Journal of Behavioral Finance (2025)",
     description: "This study examines gender-based differences in linguistic complexity during earnings conference calls. Our findings suggest that gender diversity in analyst ranks may enhance information extraction during earnings calls through complementary questioning strategies.",
     url: "https://doi.org/10.1080/15427560.2025.2556660"
   }
