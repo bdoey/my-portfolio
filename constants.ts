@@ -70,16 +70,6 @@ export const EXPERIENCE: ExperienceItem[] = [
       "Served as SME on proprietary web portal, debugging complex data processing issues.",
       "Conducted comprehensive QA testing preventing critical data-related production issues."
     ]
-  },
-  {
-    id: "hostdime",
-    role: "Linux Server Analyst",
-    company: "HostDime Global Corp",
-    period: "Jul 2008 – Apr 2012",
-    highlights: [
-      "Managed fleet of CentOS web servers, maintaining 99.95% uptime.",
-      "Built foundational experience in optimizing scalable compute infrastructure."
-    ]
   }
 ];
 
